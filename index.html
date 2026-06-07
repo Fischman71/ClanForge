@@ -4,12 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClanForge — Clash of Clans Clan Management</title>
-  <meta name="description" content="The ultimate clan management tool for Clash of Clans leaders. Track achievements, plan wars, analyze your roster. Coming soon." />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="ClanForge is a mobile-first Clash of Clans clan management app. Plan wars, push assignments to members, track every stat, run multiple clans and accounts from one place. Now in beta." />
 
   <style>
     /* ── Variables ── */
@@ -27,6 +22,10 @@
       --text:        #EEE8D5;
       --text-muted:  #8B8070;
       --discord:     #5865F2;
+
+      /* System font stacks — no webfonts, no CDN */
+      --font-display: 'Trebuchet MS', 'Segoe UI', system-ui, -apple-system, 'Roboto', sans-serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     }
 
     /* ── Reset ── */
@@ -36,7 +35,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: var(--font-body);
       font-size: 18px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -119,14 +118,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Cinzel Decorative', serif;
+      font-family: var(--font-display);
       font-size: 14px;
       font-weight: 900;
       color: #0D0D1A;
+      /* Replace this div with <img src="icon.png"> when ready */
     }
 
     .nav-logo-text {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: 18px;
       font-weight: 700;
       color: var(--gold);
@@ -136,7 +136,7 @@
     .nav-cta {
       background: var(--gold);
       color: #0D0D1A;
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 13px;
       letter-spacing: 0.08em;
@@ -188,7 +188,8 @@
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(0.8); }
     }
-    
+
+    /* Logo placeholder — swap for <img> when ready */
     .hero-logo {
       width: 120px;
       height: 120px;
@@ -198,29 +199,32 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Cinzel Decorative', serif;
+      font-family: var(--font-display);
       font-size: 36px;
       font-weight: 900;
       color: var(--gold);
       margin: 0 auto 32px;
       box-shadow: 0 0 60px rgba(245,166,35,0.2), 0 8px 32px rgba(0,0,0,0.6);
       animation: fadeUp 0.6s 0.1s ease both;
+      /* To use the real logo: replace this entire div with:
+         <img src="icon.png" width="120" height="120" style="border-radius:24px;" alt="ClanForge"> */
     }
 
     .hero-title {
-      font-family: 'Cinzel Decorative', serif;
+      font-family: var(--font-display);
       font-size: clamp(36px, 7vw, 72px);
       font-weight: 900;
       color: var(--gold);
-      line-height: 1.1;
-      letter-spacing: 0.02em;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
       text-shadow: 0 0 80px rgba(245,166,35,0.3);
       margin-bottom: 8px;
       animation: fadeUp 0.6s 0.2s ease both;
     }
 
     .hero-subtitle-line {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: clamp(14px, 2.5vw, 20px);
       font-weight: 400;
       color: var(--text-muted);
@@ -287,7 +291,7 @@
       outline: none;
       padding: 14px 18px;
       color: var(--text);
-      font-family: 'Rajdhani', sans-serif;
+      font-family: var(--font-body);
       font-size: 16px;
       font-weight: 500;
     }
@@ -299,7 +303,7 @@
       border: none;
       padding: 14px 24px;
       color: #0D0D1A;
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 14px;
       letter-spacing: 0.08em;
@@ -337,7 +341,7 @@
       gap: 10px;
       background: var(--discord);
       color: #fff;
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 15px;
       letter-spacing: 0.06em;
@@ -370,7 +374,7 @@
 
     .section-label {
       text-align: center;
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: 12px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
@@ -380,7 +384,7 @@
 
     .section-title {
       text-align: center;
-      font-family: 'Cinzel Decorative', serif;
+      font-family: var(--font-display);
       font-size: clamp(24px, 4vw, 40px);
       font-weight: 700;
       color: var(--text);
@@ -427,7 +431,7 @@
     }
 
     .feature-title {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: 17px;
       font-weight: 700;
       color: var(--gold);
@@ -491,7 +495,7 @@
     }
 
     .manifesto-text {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: clamp(18px, 3vw, 26px);
       font-weight: 400;
       color: var(--text);
@@ -523,7 +527,7 @@
     }
 
     .stat-value {
-      font-family: 'Cinzel Decorative', serif;
+      font-family: var(--font-display);
       font-size: 36px;
       font-weight: 900;
       color: var(--gold);
@@ -647,10 +651,10 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="icon.png" width="36" height="36" style="border-radius:8px;" alt="ClanForge" />
+        <img src="icon.PNG" width="36" height="36" style="border-radius:8px;" alt="ClanForge" />
         <span class="nav-logo-text">ClanForge</span>
       </a>
-      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+      <a href="#waitlist" class="nav-cta">Get Beta Access</a>
     </div>
   </nav>
 
@@ -660,18 +664,18 @@
 
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        Coming Soon — Join the Waitlist
+        Now in Beta — Testers Wanted
       </div>
 
-      <img src="icon.png" width="120" height="120" style="border-radius:24px;margin:0 auto 32px;display:block;box-shadow:0 0 60px rgba(245,166,35,0.2),0 8px 32px rgba(0,0,0,0.6);animation:fadeUp 0.6s 0.1s ease both;" alt="ClanForge" />
+      <img src="icon.PNG" width="120" height="120" style="border-radius:24px;margin:0 auto 32px;display:block;box-shadow:0 0 60px rgba(245,166,35,0.2),0 8px 32px rgba(0,0,0,0.6);animation:fadeUp 0.6s 0.1s ease both;" alt="ClanForge" />
 
       <h1 class="hero-title">ClanForge</h1>
       <p class="hero-subtitle-line">Clash of Clans · Clan Management</p>
 
       <p class="hero-description">
-        Enter your player tag once. ClanForge detects your clan, reads your role,
-        and gives you exactly the tools you need — whether you're a fresh recruit
-        or running a multi-clan empire.
+        The clan management app that works for everyone in the clan. Leaders plan
+        wars and push assignments straight to members' phones. Members track their
+        stats, see how they stack up, and never miss an attack. One app, every role.
       </p>
 
       <div class="ornament">
@@ -696,16 +700,16 @@
             required
             autocomplete="email"
           />
-          <button class="waitlist-btn" type="submit">Notify Me</button>
+          <button class="waitlist-btn" type="submit">Get Beta Access</button>
         </form>
         <div class="waitlist-success" id="waitlistSuccess">
-          ⚔️ You're on the list. We'll reach out before launch.
+          ⚔️ You're on the list. We'll send beta access details soon.
         </div>
       </div>
 
-      <p class="waitlist-note">No spam. Launch notification only.</p>
+      <p class="waitlist-note">Free during beta. Drop your email or jump straight into Discord.</p>
 
-      <a href="https://discord.gg/NQ9heEh3B" target="_blank" rel="noopener" class="discord-btn">
+      <a href="https://discord.gg/fSfDXygg2" target="_blank" rel="noopener" class="discord-btn">
         <svg class="discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.11 18.1.12 18.12a19.874 19.874 0 0 0 5.989 3.032.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.032.077.077 0 0 0 .032-.027c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
         </svg>
@@ -722,11 +726,11 @@
     <div class="container">
       <div class="manifesto-inner fade-in">
         <p class="manifesto-text">
-          Most CoC tools treat everyone the same.<br />
-          <strong>ClanForge doesn't.</strong><br /><br />
-          Know your player. Know your role. Get the right information
-          for your seat — nothing more, nothing less.
-          From member to leader, <strong>one app for your entire CoC career.</strong>
+          Most CoC tools are built for one person — usually the leader.<br />
+          <strong>ClanForge is built for the whole clan.</strong><br /><br />
+          War plans reach every member. Stats are there for everyone to see.
+          Leadership and members finally share the same screen — and clans that
+          communicate are clans that stay active.
         </p>
       </div>
     </div>
@@ -743,39 +747,39 @@
       <div class="features-grid">
 
         <div class="feature-card fade-in">
-          <span class="feature-icon">⚡</span>
-          <h3 class="feature-title">Player-Tag Onboarding</h3>
-          <p class="feature-desc">Enter your player tag once. ClanForge finds your clan and detects your role automatically. No manual setup, no clan tag hunting.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <span class="feature-icon">🎭</span>
-          <h3 class="feature-title">Role-Aware UI</h3>
-          <p class="feature-desc">Members see personal stats and war assignments. Leaders see the full analytics suite. The app knows who you are and shows you what matters.</p>
+          <span class="feature-icon">⚔️</span>
+          <h3 class="feature-title">War Planning That Reaches Everyone</h3>
+          <p class="feature-desc">Leaders assign bases, add attack notes, and track who hasn't gone yet. Members get their assignments pushed straight to their phone. No one left guessing.</p>
         </div>
 
         <div class="feature-card fade-in">
           <span class="feature-icon">📈</span>
-          <h3 class="feature-title">Achievement Tracking</h3>
-          <p class="feature-desc">Turns CoC's cumulative achievement counters into real rate-of-change metrics. See who donated the most this week. Who earned the most war stars this season. No other tool does this.</p>
+          <h3 class="feature-title">Track Your Progress</h3>
+          <p class="feature-desc">Donations, war stars, capital gold, clan games — turned into real weekly and seasonal rate-of-change metrics. See how you're doing and how you stack up against the rest of the clan.</p>
         </div>
 
         <div class="feature-card fade-in">
-          <span class="feature-icon">⚔️</span>
-          <h3 class="feature-title">War Planning</h3>
-          <p class="feature-desc">Assign attacks, add base notes, track who hasn't gone yet — all from your phone. Built for the heat of war, not a spreadsheet.</p>
+          <span class="feature-icon">🏰</span>
+          <h3 class="feature-title">Run Multiple Clans</h3>
+          <p class="feature-desc">Managing feeders, sisters, or a whole clan family? Link them together and run everything from one place. No other CoC app does this.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <span class="feature-icon">👥</span>
+          <h3 class="feature-title">Multiple Accounts</h3>
+          <p class="feature-desc">Play alternates? Verify your accounts and flip between them from anywhere in the app. Your stats, wars, and clans follow whichever account you're on.</p>
         </div>
 
         <div class="feature-card fade-in">
           <span class="feature-icon">🤖</span>
           <h3 class="feature-title">AI Leadership Tools</h3>
-          <p class="feature-desc">Rewrite your clan description in seconds. Analyze member activity. Get data-backed recommendations, not gut feelings.</p>
+          <p class="feature-desc">Rewrite your clan description, draft announcements, and generate a weekly digest built from your clan's actual stats — not gut feelings. Mark up base screenshots and post straight to your communication platform.</p>
         </div>
 
         <div class="feature-card fade-in">
           <span class="feature-icon">📱</span>
-          <h3 class="feature-title">Mobile-First, Always</h3>
-          <p class="feature-desc">Most competitors are desktop web apps. ClanForge is built native for Android — fast, offline-capable, and designed for your phone.</p>
+          <h3 class="feature-title">Native, On Your Phone</h3>
+          <p class="feature-desc">Not a Discord bot. Not a web dashboard squeezed onto a small screen. ClanForge is a fast, polished native Android app built by actual Clashers.</p>
         </div>
 
       </div>
@@ -806,16 +810,12 @@
           <span class="stat-label">Tracked Metrics</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">100%</span>
-          <span class="stat-label">On-Device Privacy</span>
-        </div>
-        <div class="stat-item">
           <span class="stat-value">Free</span>
-          <span class="stat-label">To Start</span>
+          <span class="stat-label">During Beta</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">Android</span>
-          <span class="stat-label">Native App</span>
+          <span class="stat-value">No Ads</span>
+          <span class="stat-label">Ever</span>
         </div>
       </div>
     </div>
@@ -824,11 +824,11 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container">
-      <p class="section-label">Early Access</p>
-      <h2 class="hero-title fade-in">Be First In Line</h2>
+      <p class="section-label">Join the Beta</p>
+      <h2 class="hero-title fade-in">Help Shape ClanForge</h2>
       <p class="hero-description fade-in">
-        ClanForge is launching soon. Get on the waitlist for early access
-        and launch-day updates.
+        ClanForge is in active beta and we're looking for more testers. Get in
+        early, help steer what gets built, and lock in founder perks before launch.
       </p>
 
       <div class="cta-buttons fade-in">
@@ -845,10 +845,10 @@
             placeholder="your@email.com"
             required
           />
-          <button class="waitlist-btn" type="submit">Join Waitlist</button>
+          <button class="waitlist-btn" type="submit">Get Beta Access</button>
         </form>
 
-        <a href="https://discord.gg/NQ9heEh3B" target="_blank" rel="noopener" class="discord-btn">
+        <a href="https://discord.gg/fSfDXygg2" target="_blank" rel="noopener" class="discord-btn">
           <svg class="discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.11 18.1.12 18.12a19.874 19.874 0 0 0 5.989 3.032.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.032.077.077 0 0 0 .032-.027c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
           </svg>
@@ -864,7 +864,7 @@
       <div class="footer-links">
         <a href="https://github.com/Fischman71/ClanForge-Privacy-Policy" target="_blank" rel="noopener">GitHub</a>
         <a href="https://fischman71.github.io/ClanForge-Privacy-Policy" target="_blank" rel="noopener">Privacy Policy</a>
-        <a href="https://discord.gg/NQ9heEh3B" target="_blank" rel="noopener">Discord</a>
+        <a href="https://discord.gg/fSfDXygg2" target="_blank" rel="noopener">Discord</a>
       </div>
       <p class="footer-disclaimer">
         ClanForge is not affiliated with, endorsed by, or connected to Supercell in any way.
@@ -903,7 +903,7 @@
               if (s) s.style.display = 'block';
             } else {
               const wrap = form.parentElement;
-              wrap.innerHTML = '<p style="color:var(--green);font-weight:600;font-size:15px;">⚔️ You\'re on the list. We\'ll reach out before launch.</p>';
+              wrap.innerHTML = '<p style="color:var(--green);font-weight:600;font-size:15px;">⚔️ You\'re on the list. We\'ll send beta access details soon.</p>';
             }
           } else {
             btn.textContent = 'Try Again';
