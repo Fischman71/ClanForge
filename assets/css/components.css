@@ -426,14 +426,16 @@ td {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   aspect-ratio: 9 / 19.5;
+  position: relative;
 }
 
 .phone-mockup-screen {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   animation: mock-scroll var(--scroll-duration, 8s) ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @keyframes mock-scroll {
