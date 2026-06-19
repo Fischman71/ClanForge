@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Departure Tracking &amp; Alumni — ClanForge Guide</title>
+  <meta name="description" content="How ClanForge tracks members who leave — the departures banner, reason picker, and the Alumni screen that groups every former member by how they left.">
+  <link rel="canonical" href="https://clanforge.cc/guide/leaders/alumni">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#for-leaders">For leaders</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Departure tracking &amp; Alumni</span>
+        </nav>
+
+        <h1>Departure Tracking &amp; Alumni</h1>
+        <p class="lead">When someone leaves your clan, ClanForge notices within a minute — and gives you a place to record why, so you know who's welcome back and who isn't.</p>
+
+        <p>The Members screen shows an "N departures" banner whenever someone's left since you last checked. As a leader or co-leader, tap a row to record why they left — pick from nine reasons, from "left no reason" to "kicked, banned", and add a 200-character note if you want more context.</p>
+
+        <img class="screenshot" src="/assets/img/guide/leaders/alumni.png" alt="Alumni screen showing departed members grouped into Welcome back, Allow back, and Banned sections">
+
+        <p>Every classified departure feeds the Alumni screen, under Leader Tools. It groups every player who's ever left your clan into four buckets — Unclassified, Welcome back, Allow back, Banned — colour-coded by severity. Tap a row to jump to that player's Player Details, or tap the reason chip to reclassify.</p>
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> If someone leaves and comes back, ClanForge shows a "Previously left this clan" card on their Player Details with the date, reason, and your note — handy context before you approve a re-invite.</p>
+        </div>
+
+        <p>Departure detection runs server-side on a sub-minute cron, so the banner and Alumni list stay current even if nobody in leadership has the app open when it happens.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/leaders/member-analytics" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Member analytics &amp; leader dashboard</span>
+          </a>
+          <a href="/guide/leaders/ai-tools" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>AI Tools (Digest, Announcements, Description)</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

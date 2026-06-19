@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Desk — ClanForge</title>
+  <meta name="description" content="Ask anything about ClanForge. Search the user guide or join Discord for a live answer.">
+  <link rel="canonical" href="https://clanforge.cc/help/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="/" aria-label="ClanForge home">ClanForge</a>
+    <nav id="nav-links" class="nav-links" aria-label="Site navigation">
+      <a href="/install">Install</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/guide/">Guide</a>
+      <a href="/help/" aria-current="page">Help</a>
+      <a href="/discord">Discord</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/install" class="btn btn-primary">Install</a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+
+      <h1>Help Desk</h1>
+      <p class="lead">Ask anything. Beta — trained on the user guide first. Search below or jump straight to Discord for a live answer.</p>
+
+      <div class="help-search-wrap">
+        <label for="help-search" class="sr-only">Search guide articles</label>
+        <input
+          id="help-search"
+          class="help-search-input"
+          type="search"
+          placeholder="e.g. war assignments, CWL, API token…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+
+      <p id="help-empty" class="help-empty" hidden>No articles match. Try Discord — I'm usually around.</p>
+
+      <ul id="help-results" class="card help-results">
+
+        <!-- Getting started -->
+        <li class="help-result">
+          <a href="/guide/getting-started/install">
+            Install ClanForge
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/getting-started/first-launch">
+            First launch
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/getting-started/verifying-your-tag">
+            Verifying your player tag
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/getting-started/api-token">
+            API token: where to get one, what it does
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- For members -->
+        <li class="help-result">
+          <a href="/guide/members/reading-your-dashboard">
+            Reading your dashboard
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/members/war-assignments">
+            Your war assignments
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/members/player-details">
+            Player details and stats
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- For leaders -->
+        <li class="help-result">
+          <a href="/guide/leaders/war-planner">
+            War Planner
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/leaders/pushing-assignments">
+            Pushing assignments to members
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/leaders/member-analytics">
+            Member analytics and leader dashboard
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/leaders/alumni">
+            Departure tracking and alumni
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/leaders/ai-tools">
+            AI Tools: Digest, Announcements, Description
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/leaders/base-markup">
+            Base Markup Tool
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- Multi-clan & multi-account -->
+        <li class="help-result">
+          <a href="/guide/multi/multi-clan">
+            Adding a second clan
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/multi/multi-account">
+            Adding a second player tag
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- Pro & billing -->
+        <li class="help-result">
+          <a href="/guide/pro/what-pro-unlocks">
+            What Pro unlocks
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/pro/lifetime">
+            Lifetime pass details
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/pro/managing-subscription">
+            Managing your subscription
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- Troubleshooting -->
+        <li class="help-result">
+          <a href="/guide/troubleshooting/stats-wrong">
+            Stats look wrong
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/troubleshooting/push-not-working">
+            Push assignments aren't arriving
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/troubleshooting/rate-limited">
+            "Rate limited" message
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/troubleshooting/crashes">
+            Crashes and how to report them
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+        <!-- About -->
+        <li class="help-result">
+          <a href="/guide/about/data">
+            What data ClanForge stores and where
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+        <li class="help-result">
+          <a href="/guide/about/privacy-supercell">
+            Supercell disclaimer and Fan Content Policy
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="discord-tile card">
+        <h3>Still stuck?</h3>
+        <p>Join the ClanForge Discord and I'll hand you 30 days of Pro. No card, no email.</p>
+        <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/install">Install</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/guide/">Guide</a>
+      <a href="/help/">Help</a>
+      <a href="/changelog">Changelog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/about">About</a>
+      <a href="/discord">Discord</a>
+      <a href="https://github.com/Fischman71/ClanForge">GitHub</a>
+    </nav>
+    <p class="footer-legal">Not affiliated with or endorsed by Supercell. ClanForge is an independent fan app.</p>
+    <p class="fingerprint">APK signing key SHA256: <code>XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</code></p>
+    <p class="footer-legal">&copy; 2026 ClanForge</p>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

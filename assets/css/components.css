@@ -1,0 +1,382 @@
+/* ==========================================================================
+   components.css
+   Buttons, cards, pills, icons, tables, accordion, nav, lifetime counter.
+   Load order: base.css -> components.css -> pages.css
+   Consumes tokens from base.css. No new colors/spacing values here.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* Explicit color on hover/focus — overrides the base `a:hover` gold,
+   which would otherwise make the label vanish against a gold background. */
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #EBB565;
+  color: var(--bg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* "Big primary button" — Install page download CTA */
+.btn-lg {
+  min-height: 52px;
+  padding: var(--space-3) var(--space-5);
+  font-size: 1.0625rem;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Cards
+   -------------------------------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-3);
+}
+
+/* Lifetime tile — the one place gold is used as a border */
+.card-gold {
+  border-color: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   Pills / badges
+   e.g. "Now in alpha · v1.2", pricing tier badges
+   -------------------------------------------------------------------------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.pill-gold {
+  background: rgba(224, 163, 64, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   Icons
+   Inline SVGs (Lucide/Feather) — use fill="currentColor" or
+   stroke="currentColor" so these color classes apply.
+   -------------------------------------------------------------------------- */
+.icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.icon-check { color: var(--green); }
+.icon-dash { color: var(--muted); }
+
+/* --------------------------------------------------------------------------
+   Screenshots
+   Real, cropped tight. 1px border + subtle shadow. No mockup frames
+   (the hero phone-bezel SVG is the sole exception, styled in pages.css).
+   -------------------------------------------------------------------------- */
+.screenshot {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   Pricing feature comparison
+   -------------------------------------------------------------------------- */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+th, td {
+  padding: var(--space-2);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text);
+}
+
+td {
+  color: var(--muted);
+}
+
+/* Tier columns — center the check/dash icon cells */
+.tier-cell {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Accordion (<details>/<summary>)
+   FAQ, troubleshooting, pricing comparison groupings
+   -------------------------------------------------------------------------- */
+.accordion {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion + .accordion {
+  margin-top: var(--space-1);
+}
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* display: flex on summary already drops the default marker in
+   evergreen browsers; this covers older WebKit. */
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom chevron, rotates open */
+.accordion summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.accordion[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.accordion summary:hover,
+.accordion summary:focus-visible {
+  color: var(--gold);
+}
+
+.accordion summary:hover::after,
+.accordion summary:focus-visible::after {
+  border-color: var(--gold);
+}
+
+/* Wrap body content in this div for consistent spacing */
+.accordion-body {
+  padding: 0 var(--space-3) var(--space-3);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   Nav
+   Sticky, slim. Pair with .container on .nav-inner for max-width + gutters.
+   -------------------------------------------------------------------------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(14, 13, 10, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 56px;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding-block: var(--space-1);
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--text);
+}
+
+.nav-links a[aria-current='page'] {
+  color: var(--text);
+  border-bottom-color: var(--gold);
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* Mobile menu open state — toggled by site.js */
+.nav-links.is-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-6);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--gold);
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   Fingerprint
+   Signing-key SHA256 — reused on Install, About, footer
+   -------------------------------------------------------------------------- */
+.fingerprint {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+/* --------------------------------------------------------------------------
+   Lifetime counter
+   "N of 250 claimed" — pulses once on load, the one motion exception.
+   The global prefers-reduced-motion rule in base.css (which forces
+   animation-duration to ~0) already neutralizes this for those users.
+   -------------------------------------------------------------------------- */
+@keyframes pulse-once {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.lifetime-counter {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--gold);
+  animation: pulse-once 0.6s ease-out 1;
+}

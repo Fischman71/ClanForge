@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Managing your subscription — ClanForge Guide</title>
+  <meta name="description" content="How to cancel, switch, or get help with your ClanForge Pro plan — billed and managed through PayPal.">
+  <link rel="canonical" href="https://clanforge.cc/guide/pro/managing-subscription">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#pro-billing">Pro &amp; billing</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Managing your subscription</span>
+        </nav>
+
+        <h1>Managing your subscription</h1>
+        <p class="lead">Monthly and Yearly Pro run through PayPal's standard subscription billing. Cancelling, checking your renewal date, and updating payment details all happen on PayPal's side — ClanForge just reads the result.</p>
+
+        <p>To cancel: open PayPal, go to Settings → Payments → Manage automatic payments, and cancel the ClanForge subscription. Your Pro access stays active until the end of the period you already paid for — no proration, no partial refunds, and no action needed inside the app. The next time ClanForge checks your status after that date, it'll quietly fall back to the free tier.</p>
+
+        <img class="screenshot" src="/assets/img/guide/pro/managing-subscription.png" alt="Settings screen showing active Pro plan and renewal date">
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> Lifetime has nothing to manage — it's a single payment with no recurring charge, so there's no subscription to cancel and nothing to appear in PayPal's automatic payments list.</p>
+        </div>
+
+        <p>Want to switch from Monthly to Yearly (or back)? Cancel the current plan in PayPal, then start the new one from <a href="/pricing">/pricing</a> — your Pro access carries through as long as the new subscription starts before the old one lapses. If a charge looks wrong or Pro didn't activate after payment, drop your PayPal receipt ID in Discord or open a GitHub issue — these edge cases get handled manually.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/pro/lifetime" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Lifetime pass details</span>
+          </a>
+          <a href="/guide/troubleshooting/stats-wrong" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Stats look wrong</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

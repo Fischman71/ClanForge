@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Your API Token — ClanForge Guide</title>
+  <meta name="description" content="Where to find your in-game API Token in Clash of Clans, and exactly what ClanForge does — and doesn't — do with it.">
+  <link rel="canonical" href="https://clanforge.cc/guide/getting-started/api-token">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#getting-started">Getting started</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Your API Token</span>
+        </nav>
+
+        <h1>Your API Token</h1>
+        <p class="lead">ClanForge asks for your in-game API Token once, to confirm a player tag is actually yours. Here's exactly where to find it in Clash of Clans, and what ClanForge does — and doesn't — do with it.</p>
+
+        <p>In Clash of Clans, open Settings (the gear icon, top right), then More Settings. Scroll down to API Token and tap it to reveal the code.</p>
+
+        <img class="screenshot" src="/assets/img/guide/getting-started/api-token.png" alt="Clash of Clans Settings screen showing the API Token field under More Settings">
+
+        <p>Copy that code into ClanForge's verification prompt. ClanForge sends it once to Supercell's official verification endpoint — the same check Supercell provides for any third-party tool — to confirm the tag belongs to whoever's holding the phone.</p>
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> If verification fails, go back to Settings → More Settings in Clash of Clans and tap the API Token field again. It can take a moment to generate, and occasionally needs refreshing.</p>
+        </div>
+
+        <p>After that one check, ClanForge doesn't reuse this token. All ongoing data — your stats, your clan's roster, war info — is fetched server-side through ClanForge's own access, not yours. The token is never stored as a way to access your account later.</p>
+
+        <p>It's also worth knowing what this token isn't: it's not your Supercell ID password, and ClanForge will never ask for that. The API Token only proves you can see your own in-game settings — nothing more.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/getting-started/verifying-your-tag" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Verifying your player tag</span>
+          </a>
+          <a href="/guide/members/reading-your-dashboard" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Reading your dashboard</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

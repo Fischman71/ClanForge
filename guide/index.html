@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Guide — ClanForge</title>
+  <meta name="description" content="ClanForge user guide — installing, first launch, war planning, AI tools, multi-clan, Pro, and troubleshooting, all in one place.">
+  <link rel="canonical" href="https://clanforge.cc/guide/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="ClanForge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guide — ClanForge">
+  <meta property="og:description" content="ClanForge user guide — installing, first launch, war planning, AI tools, multi-clan, Pro, and troubleshooting, all in one place.">
+  <meta property="og:url" content="https://clanforge.cc/guide/">
+  <meta property="og:image" content="https://clanforge.cc/assets/img/og-image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==========================================================================
+       Nav — shared markup, pasted from index.html. aria-current moved to
+       the Guide link.
+       ========================================================================== -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1>Guide</h1>
+        <p class="lead">Everything you need to run ClanForge — from your first install to leading a clan with the AI tools. Can't find what you're after? The Help Desk searches every article.</p>
+
+        <!-- ==================================================================
+             Getting started — built session 5, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="getting-started">Getting started</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/getting-started/install">
+              Install ClanForge
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/getting-started/first-launch">
+              First launch
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/getting-started/verifying-your-tag">
+              Verifying your player tag
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/getting-started/api-token">
+              Your API Token
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             For members — built session 6, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="for-members">For members</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/members/reading-your-dashboard">
+              Reading your dashboard
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/members/war-assignments">
+              Your war assignments
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/members/player-details">
+              Player Details and stats
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             For leaders — built session 6, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="for-leaders">For leaders</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/leaders/war-planner">
+              War Planner
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/leaders/pushing-assignments">
+              Pushing assignments to members
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/leaders/member-analytics">
+              Member analytics &amp; leader dashboard
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/leaders/alumni">
+              Departure tracking &amp; Alumni
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/leaders/ai-tools">
+              AI Tools (Digest, Announcements, Description)
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/leaders/base-markup">
+              Base Markup Tool
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             Multi-clan & multi-account — built session 7, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="multi">Multi-clan &amp; multi-account</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/multi/multi-clan">
+              Adding a second clan (Pro)
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/multi/multi-account">
+              Adding a second player tag
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             Pro & billing — built session 7, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="pro-billing">Pro &amp; billing</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/pro/what-pro-unlocks">
+              What Pro unlocks
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/pro/lifetime">
+              Lifetime pass details
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/pro/managing-subscription">
+              Managing your subscription
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             Troubleshooting — built session 7, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="troubleshooting">Troubleshooting</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/troubleshooting/stats-wrong">
+              Stats look wrong
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/troubleshooting/push-not-working">
+              Push assignments aren't arriving
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/troubleshooting/rate-limited">
+              "Rate limited" message
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/troubleshooting/crashes">
+              Crashes &amp; how to report
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             About — built session 7, real links
+             ================================================================== -->
+        <div class="guide-category">
+          <h2 class="section-title" id="about">About</h2>
+          <div class="card guide-article-list">
+            <a class="guide-article-item" href="/guide/about/data">
+              What data ClanForge stores
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="guide-article-item" href="/guide/about/privacy-supercell">
+              Privacy &amp; Supercell policy
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer — shared markup, pasted from index.html.
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

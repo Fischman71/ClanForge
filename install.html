@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Get ClanForge — Android APK Download</title>
+  <meta name="description" content="Download ClanForge for Android — sideload the APK, verify the signing key, and get your clan set up in three taps. No Play Store required.">
+  <link rel="canonical" href="https://clanforge.cc/install">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="ClanForge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get ClanForge — Android APK Download">
+  <meta property="og:description" content="Download ClanForge for Android — sideload the APK, verify the signing key, and get your clan set up in three taps. No Play Store required.">
+  <meta property="og:url" content="https://clanforge.cc/install">
+  <meta property="og:image" content="https://clanforge.cc/assets/img/og-image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==========================================================================
+       Nav — shared markup, paste into every page. Update aria-current and
+       the nav-logo aria-current to match the active page.
+       ========================================================================== -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary" aria-current="page">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ========================================================================
+         iOS banner — hidden by default ([hidden] is display:none by spec).
+         site.js removes the attribute for iOS user agents.
+         ======================================================================== -->
+    <div class="ios-banner" id="ios-banner" hidden>
+      <div class="container">
+        <p>ClanForge is Android-only for now. <a href="/discord">Join the Discord</a> and I'll tell you the day an iOS build is real.</p>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         Header + download block
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <h1>Get ClanForge.</h1>
+        <p class="lead">Android only. APK sideload, no Play Store.</p>
+
+        <!-- TODO: hand-edit version, size, release date, and fingerprint per
+             release — same pattern as the footer fingerprint and home's
+             lifetime counter. -->
+        <div class="card download-card">
+          <!-- TODO: point at the direct GitHub Releases asset once the APK
+               filename is stable; currently links to the releases page. -->
+          <a href="https://github.com/Fischman71/ClanForge/releases/latest" class="btn btn-primary btn-lg download-btn" target="_blank" rel="noopener noreferrer">Download ClanForge v1.2.x APK</a>
+          <dl class="download-meta">
+            <div class="download-meta-item">
+              <dt>Version</dt>
+              <dd>v1.2.x</dd>
+            </div>
+            <div class="download-meta-item">
+              <dt>Size</dt>
+              <dd>~XX MB</dd>
+            </div>
+            <div class="download-meta-item">
+              <dt>Released</dt>
+              <dd>DD Mon 2026</dd>
+            </div>
+          </dl>
+          <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        </div>
+
+        <details class="accordion download-verify">
+          <summary>Verify this fingerprint</summary>
+          <div class="accordion-body">
+            <p>Run an APK signature checker — <code>apksigner verify --print-certs</code>, or any "APK Analyzer" app — against the file you downloaded. The SHA-256 it reports should match the fingerprint above and the one on the <a href="https://github.com/Fischman71/ClanForge/releases/latest" target="_blank" rel="noopener noreferrer">GitHub Release page</a>. If it doesn't match, don't install it.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Three-step install guide
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Three taps to installed</h2>
+        <ol class="install-steps">
+          <li class="install-step">
+            <div class="install-step-number">1</div>
+            <div class="install-step-body">
+              <p>Tap <strong>Download</strong>. Your browser shows a download notification when it's done.</p>
+              <img class="screenshot" src="/assets/img/install/step-1.png" alt="Browser download notification for the ClanForge APK file">
+            </div>
+          </li>
+          <li class="install-step">
+            <div class="install-step-number">2</div>
+            <div class="install-step-body">
+              <p>Tap the notification, then allow your browser to install apps from this source — your phone only asks once.</p>
+              <img class="screenshot" src="/assets/img/install/step-2.png" alt="Android settings screen showing the Allow from this source toggle">
+            </div>
+          </li>
+          <li class="install-step">
+            <div class="install-step-number">3</div>
+            <div class="install-step-body">
+              <p>Open the file and tap <strong>Install</strong>. ClanForge lands on your home screen.</p>
+              <img class="screenshot" src="/assets/img/install/step-3.png" alt="Android system installer dialog for the ClanForge APK">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Why no Play Store / Is this safe
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why isn't this on the Play Store?</h2>
+        <p>Google's review process for clan tools that read game data is slow and unpredictable for a solo dev. Sideloading means a fix or a new feature ships the day it's ready, not whenever a review queue clears.</p>
+
+        <hr>
+
+        <h2 class="section-title">Is this safe?</h2>
+        <p>Every release is signed with the same key — check the fingerprint above against the <a href="https://github.com/Fischman71/ClanForge/releases/latest" target="_blank" rel="noopener noreferrer">GitHub Release page</a> before you install. ClanForge has no analytics and no trackers, and your clan data stays on your phone unless you turn on a Pro hosted feature.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Troubleshooting + updates note
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Troubleshooting</h2>
+
+        <details class="accordion" id="chrome-unsafe">
+          <summary>Chrome says this file is unsafe.</summary>
+          <div class="accordion-body">
+            <p>Chrome flags every sideloaded APK this way, not just ClanForge's. Tap the download notification, then <strong>"⋮" → Download anyway</strong> (or "Keep" on the warning that follows).</p>
+          </div>
+        </details>
+
+        <details class="accordion" id="install-source-blocked">
+          <summary>My phone won't let me install from this source.</summary>
+          <div class="accordion-body">
+            <p>Android blocks installs from unknown sources by default. When you open the APK, tap <strong>Settings</strong> on the prompt, enable <strong>Allow from this source</strong> for your browser, then go back and open the file again.</p>
+          </div>
+        </details>
+
+        <details class="accordion" id="play-protect-blocked">
+          <summary>Install was blocked by Play Protect.</summary>
+          <div class="accordion-body">
+            <p>Play Protect scans every sideloaded app, signed or not. Tap <strong>More details → Install anyway</strong>. ClanForge doesn't ask for any permission beyond what's listed in the guide.</p>
+          </div>
+        </details>
+
+        <details class="accordion" id="ios">
+          <summary>I'm on iOS.</summary>
+          <div class="accordion-body">
+            <p>There's no iOS build, and no timeline for one. <a href="/discord">Join the Discord</a> if you want to hear first if that changes.</p>
+          </div>
+        </details>
+
+        <p class="help-pointer">Still stuck? <a href="/help/">Ask the Help Desk</a>.</p>
+
+        <hr>
+
+        <p class="updates-note">ClanForge tells you in-app when a new version is out. Updates are also posted in Discord — full notes on the <a href="/changelog">changelog</a>.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Discord 30-day Pro pass
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="card card-gold discord-tile">
+          <p class="pill pill-gold">Discord</p>
+          <h3>Got it installed?</h3>
+          <p>Join the Discord and I'll hand you 30 days of Pro. No card, no email.</p>
+          <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Footer — shared markup, paste into every page.
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

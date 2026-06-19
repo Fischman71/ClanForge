@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Top-level pages -->
+  <url><loc>https://clanforge.cc/</loc><priority>1.0</priority></url>
+  <url><loc>https://clanforge.cc/install</loc><priority>0.9</priority></url>
+  <url><loc>https://clanforge.cc/pricing</loc><priority>0.9</priority></url>
+  <url><loc>https://clanforge.cc/guide/</loc><priority>0.8</priority></url>
+  <url><loc>https://clanforge.cc/help/</loc><priority>0.7</priority></url>
+  <url><loc>https://clanforge.cc/changelog</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/about</loc><priority>0.5</priority></url>
+  <url><loc>https://clanforge.cc/privacy</loc><priority>0.4</priority></url>
+
+  <!-- Guide: Getting Started -->
+  <url><loc>https://clanforge.cc/guide/getting-started/install.html</loc><priority>0.7</priority></url>
+  <url><loc>https://clanforge.cc/guide/getting-started/first-launch.html</loc><priority>0.7</priority></url>
+  <url><loc>https://clanforge.cc/guide/getting-started/verifying-your-tag.html</loc><priority>0.7</priority></url>
+  <url><loc>https://clanforge.cc/guide/getting-started/api-token.html</loc><priority>0.7</priority></url>
+
+  <!-- Guide: Members -->
+  <url><loc>https://clanforge.cc/guide/members/reading-your-dashboard.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/members/war-assignments.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/members/player-details.html</loc><priority>0.6</priority></url>
+
+  <!-- Guide: Leaders -->
+  <url><loc>https://clanforge.cc/guide/leaders/war-planner.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/leaders/pushing-assignments.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/leaders/member-analytics.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/leaders/alumni.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/leaders/ai-tools.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/leaders/base-markup.html</loc><priority>0.6</priority></url>
+
+  <!-- Guide: Multi -->
+  <url><loc>https://clanforge.cc/guide/multi/multi-clan.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/multi/multi-account.html</loc><priority>0.6</priority></url>
+
+  <!-- Guide: Pro -->
+  <url><loc>https://clanforge.cc/guide/pro/what-pro-unlocks.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/pro/lifetime.html</loc><priority>0.6</priority></url>
+  <url><loc>https://clanforge.cc/guide/pro/managing-subscription.html</loc><priority>0.6</priority></url>
+
+  <!-- Guide: Troubleshooting -->
+  <url><loc>https://clanforge.cc/guide/troubleshooting/stats-wrong.html</loc><priority>0.5</priority></url>
+  <url><loc>https://clanforge.cc/guide/troubleshooting/push-not-working.html</loc><priority>0.5</priority></url>
+  <url><loc>https://clanforge.cc/guide/troubleshooting/rate-limited.html</loc><priority>0.5</priority></url>
+  <url><loc>https://clanforge.cc/guide/troubleshooting/crashes.html</loc><priority>0.5</priority></url>
+
+  <!-- Guide: About -->
+  <url><loc>https://clanforge.cc/guide/about/data.html</loc><priority>0.5</priority></url>
+  <url><loc>https://clanforge.cc/guide/about/privacy-supercell.html</loc><priority>0.5</priority></url>
+
+</urlset>

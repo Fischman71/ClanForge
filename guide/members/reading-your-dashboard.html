@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Reading Your Dashboard — ClanForge Guide</title>
+  <meta name="description" content="What's on ClanForge's Dashboard and what it means — clan header, live stats, refresh status, and your quick-access tools.">
+  <link rel="canonical" href="https://clanforge.cc/guide/members/reading-your-dashboard">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#for-members">For members</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Reading your dashboard</span>
+        </nav>
+
+        <h1>Reading Your Dashboard</h1>
+        <p class="lead">The Dashboard is the first thing you see — your clan's live snapshot plus quick links to everything else. Here's what's on it, where the numbers come from, and how often they update.</p>
+
+        <p>At the top, your clan's badge, name, and tag sit beside a stat strip — member count, war league, and current win streak. Tap the header to jump into Clan Detail for the full roster, town hall spread, and war record.</p>
+
+        <img class="screenshot" src="/assets/img/guide/members/dashboard.png" alt="ClanForge Dashboard showing the clan header, stat strip, and tool sections">
+
+        <p>Below that, a small "Updated Xm ago" pill tells you when ClanForge last pulled fresh data from Clash of Clans. Clan info refreshes on its own roughly every 10 minutes — you don't need to do anything.</p>
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> Pull down on the Dashboard to force a refresh. ClanForge checks the server first and only fetches new data if it's actually due — so spamming refresh won't get you rate-limited.</p>
+        </div>
+
+        <p>The Tools section is your jumping-off point — Builder Tracker for your timers, AI Tools and other leader features if you're a co-leader or leader (a small gold dot marks anything Pro-only), and a Discord link for support. If you've verified more than one player tag, an Accounts row above the tools lets you flip between them without leaving the screen.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/getting-started/api-token" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Your API Token</span>
+          </a>
+          <a href="/guide/members/war-assignments" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Your war assignments</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

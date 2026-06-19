@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Stats look wrong — ClanForge Guide</title>
+  <meta name="description" content="Why a stat might look off, how ClanForge's refresh cycle works, and when to pull-to-refresh versus just wait.">
+  <link rel="canonical" href="https://clanforge.cc/guide/troubleshooting/stats-wrong">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#troubleshooting">Troubleshooting</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Stats look wrong</span>
+        </nav>
+
+        <h1>Stats look wrong</h1>
+        <p class="lead">Most "wrong" numbers are just behind — ClanForge refreshes clan and member data on a cache cycle, not instantly on every in-game change. A pull-to-refresh and a minute usually sorts it.</p>
+
+        <p>Clan and member data is fetched server-side on a rolling cycle, so a donation, trophy change, or war result can take a few minutes to appear. Pull down on the Dashboard, Members, or Tracking screen to force a fresh pull rather than waiting out the cycle.</p>
+
+        <img class="screenshot" src="/assets/img/guide/troubleshooting/stats-wrong.png" alt="Tracking screen mid pull-to-refresh showing updated member stats">
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> Season and Lifetime totals (war stars, CWL stars, Clan Games, raid loot) are calculated from snapshots taken over time, not a single live number. Right after install, or for a player who's been inactive, there may not be enough snapshots yet to show a clean delta — give it a few days of normal use and the numbers fill in.</p>
+        </div>
+
+        <p>On the free tier, history older than 30 days is downsampled to save space — you'll see fewer data points further back, not incorrect ones. Pro keeps full resolution indefinitely. If a number still looks wrong after a refresh and a day of normal play, it's worth a report — see Crashes &amp; how to report for where to send it.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/pro/managing-subscription" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Managing your subscription</span>
+          </a>
+          <a href="/guide/troubleshooting/push-not-working" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Push assignments aren't arriving</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

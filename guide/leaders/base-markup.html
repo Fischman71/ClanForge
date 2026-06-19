@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>Base Markup Tool — ClanForge Guide</title>
+  <meta name="description" content="Annotate base screenshots in ClanForge — arrows, troops, numbered attack order, and a one-tap Discord post, straight from War Planner or your Dashboard.">
+  <link rel="canonical" href="https://clanforge.cc/guide/leaders/base-markup">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#for-leaders">For leaders</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Base Markup Tool</span>
+        </nav>
+
+        <h1>Base Markup Tool</h1>
+        <p class="lead">Base Markup turns any screenshot into an attack plan — draw paths, drop troop icons, number your attack order, and share it without leaving the app.</p>
+
+        <p>Get to it two ways: tap the brush icon on a base row in War Planner to mark up that specific opponent base, or open it as a standalone tool from your Dashboard for any image — recon shots, your clan mates' bases, anything.</p>
+
+        <img class="screenshot" src="/assets/img/guide/leaders/base-markup.png" alt="Base Markup Tool canvas showing arrows, troop icons, and numbered attack-order circles on a base screenshot">
+
+        <p>Pinch to zoom up to 8x and pan with two fingers — drawing only triggers with one finger, so zooming never accidentally adds a stray line. Draw arrows, dots, stars, freehand lines, highlights, or text labels in five colours, and undo or redo as many steps as you need.</p>
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> The troops tool drops recognizable icons for any of 83 troops, spells, and sieges — grouped by Heroes, Pets, Air, Ground, Spells, and Sieges — so "send the Super Wizard here" doesn't need a caption.</p>
+        </div>
+
+        <p>The numbered attack-order tool auto-increments with each tap, so you can mark a 1-2-3 funnel without manually typing numbers. When you're done, export straight to your phone's share sheet, or use the Post to Discord button to send the image and an optional caption directly to your clan's webhook — no bot, no login.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/leaders/ai-tools" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>AI Tools (Digest, Announcements, Description)</span>
+          </a>
+          <a href="/guide/multi/multi-clan" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Adding a second clan (Pro)</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0D0A">
+
+  <title>War Planner — ClanForge Guide</title>
+  <meta name="description" content="How to assign opponent bases, set callers, and add notes with ClanForge's War Planner — plus the per-round CWL planner and base markup link.">
+  <link rel="canonical" href="https://clanforge.cc/guide/leaders/war-planner">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Nav — shared markup, pasted from index.html. aria-current on Guide. -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">ClanForge</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/" aria-current="page">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/discord">Discord</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/install" class="btn btn-primary">Install</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section guide-article">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/guide/">Guide</a>
+          <span aria-hidden="true">/</span>
+          <a href="/guide/#for-leaders">For leaders</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">War Planner</span>
+        </nav>
+
+        <h1>War Planner</h1>
+        <p class="lead">War Planner is where you turn the opponent roster into a real plan — assign bases, pick callers, leave notes, and let the whole clan see it the moment you save.</p>
+
+        <p>Open War Planner from the Wars tab once your opponent roster loads. Each opposing base gets its own row — tap one to assign a clan member, pick a caller, or jot a note for whoever's attacking it.</p>
+
+        <img class="screenshot" src="/assets/img/guide/leaders/war-planner.png" alt="War Planner screen showing opponent base rows with member assignments and caller picker">
+
+        <p>The scout bar above the base list gives you quick links to the opponent's Clan Detail, their war history, and a one-tap share of the full plan. Every change you make saves instantly and pushes to members in real time — no refresh needed on either end.</p>
+
+        <div class="callout-tip">
+          <p><strong>Tip:</strong> Tap the brush icon on any base row to open it in the Base Markup Tool and draw an attack path before sharing — covered in its own article.</p>
+        </div>
+
+        <p>Running CWL? Each round gets its own planner, same layout but themed crimson to keep it visually distinct from classic wars. If your clan prefers members picking their own targets, turn on self-call from Settings — members claim bases themselves instead of waiting on you.</p>
+
+        <div class="still-stuck">
+          <div class="card">
+            <h3>Still stuck?</h3>
+            <p>The Help Desk searches every guide article for your question. Or jump into Discord — I'm usually around, and joining gets you 30 days of Pro.</p>
+            <div class="still-stuck-links">
+              <a href="/help/" class="btn btn-secondary">Ask the Help Desk</a>
+              <a href="/discord" class="btn btn-primary">Discord (+ 30d Pro)</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <a href="/guide/members/player-details" class="article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span>Player Details and stats</span>
+          </a>
+          <a href="/guide/leaders/pushing-assignments" class="article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span>Pushing assignments to members</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer — shared markup, pasted from index.html. -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/install">Install</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/help/">Help</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/discord">Discord</a></li>
+        <li><a href="https://github.com/Fischman71/ClanForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <div class="footer-meta">
+        <p>ClanForge isn't affiliated with, endorsed, sponsored, or specifically approved by Supercell. For more information see Supercell's Fan Content Policy at supercell.com/fan-content-policy.</p>
+        <!-- TODO: replace with the real signing-key fingerprint at launch -->
+        <p class="fingerprint">Signing key SHA256: XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</p>
+        <p>&copy; 2026 ClanForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
