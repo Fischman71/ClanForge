@@ -380,3 +380,71 @@ td {
   color: var(--gold);
   animation: pulse-once 0.6s ease-out 1;
 }
+
+/* --------------------------------------------------------------------------
+   Scrolling phone mockup
+   A phone-shaped frame with a tall screenshot that auto-scrolls top→bottom
+   then back. Same bezel look as .phone-frame but with overflow clipping
+   and a CSS scroll animation.
+
+   Usage:
+     <div class="phone-mockup" style="--scroll-duration: 8s">
+       <img class="phone-mockup-screen"
+            src="/assets/img/features/ai-tools.png"
+            alt="AI Tools screen scrolling through features">
+     </div>
+
+   --scroll-duration  total round-trip time (default 8s, tune per image
+                      height — taller images need more time so the scroll
+                      speed feels natural)
+
+   How it works: the outer div is a fixed aspect-ratio viewport (9:19.5,
+   matching an Android phone). overflow: hidden clips the tall image. The
+   image is width-locked (100%) and its natural height extends below the
+   viewport. The animation translates it upward by (image height − viewport
+   height). Since translateY(-100%) means the image's own height and we
+   need to stop exactly when the bottom of the image meets the bottom of
+   the viewport, the end value is calc(-100% + VIEWPORT_HEIGHT). The
+   viewport height as a percentage of the image is unknowable in pure CSS,
+   so we use a custom property --scroll-end set per-image as the translate
+   target. Calculate it as:
+     --scroll-end = -1 * (1 - viewport_aspect / image_aspect) * 100%
+   where viewport_aspect = 19.5/9 ≈ 2.167 and image_aspect = img_h / img_w.
+   Example: image is 2400×1080 → aspect = 2.222 → end = -(1 - 2.167/2.222)
+   = -2.5%. A much taller image (e.g. 4800×1080, aspect 4.444) → end =
+   -(1 - 2.167/4.444) = -51.3%.
+
+   Simpler shortcut: just set --scroll-end by eye until the bottom of the
+   screenshot is flush with the bottom of the frame at the scroll's peak.
+   -------------------------------------------------------------------------- */
+.phone-mockup {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  padding: var(--space-1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  aspect-ratio: 9 / 19.5;
+}
+
+.phone-mockup-screen {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  animation: mock-scroll var(--scroll-duration, 8s) ease-in-out infinite alternate;
+}
+
+@keyframes mock-scroll {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(0); }
+  90%  { transform: translateY(var(--scroll-end, -50%)); }
+  100% { transform: translateY(var(--scroll-end, -50%)); }
+}
+
+/* Cap width inside feature rows so it doesn't stretch on desktop */
+.feature-media .phone-mockup {
+  max-width: 280px;
+  margin-inline: auto;
+}
