@@ -1,0 +1,41 @@
+name: Inject Analytics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Inject Cloudflare Web Analytics into all HTML files
+        run: |
+          SNIPPET='<!-- Cloudflare Web Analytics --><script defer src='"'"'https://static.cloudflareinsights.com/beacon.min.js'"'"' data-cf-beacon='"'"'{"token": "b4f5a181c8794af1a25147abac5d9a14"}'"'"'></script><!-- End Cloudflare Web Analytics -->'
+
+          find . -name "*.html" \
+            -not -path "./.git/*" | while read -r f; do
+            # Skip if already injected
+            if grep -q "cloudflareinsights" "$f"; then
+              echo "Skipping $f (already has analytics)"
+              continue
+            fi
+            # Insert before closing </body> tag
+            sed -i "s|</body>|  ${SNIPPET}\n</body>|" "$f"
+            echo "Patched $f"
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "Add Cloudflare Web Analytics to all pages"
+          git push origin main
