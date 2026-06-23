@@ -1,0 +1,113 @@
+name: Update Site on Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Get release APK asset info
+        id: apk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Find the .apk asset attached to this release
+          ASSET_URL=$(gh release view "${{ github.event.release.tag_name }}" \
+            --repo "${{ github.repository }}" \
+            --json assets \
+            --jq '.assets[] | select(.name | endswith(".apk")) | .url' | head -1)
+
+          ASSET_NAME=$(gh release view "${{ github.event.release.tag_name }}" \
+            --repo "${{ github.repository }}" \
+            --json assets \
+            --jq '.assets[] | select(.name | endswith(".apk")) | .name' | head -1)
+
+          if [ -z "$ASSET_URL" ]; then
+            echo "No APK asset found on release ${{ github.event.release.tag_name }}" >&2
+            exit 1
+          fi
+
+          echo "asset_url=$ASSET_URL" >> "$GITHUB_OUTPUT"
+          echo "asset_name=$ASSET_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Download APK and compute SHA256
+        id: hash
+        run: |
+          curl -fsSL -o apk.apk "${{ steps.apk.outputs.asset_url }}"
+          SHA256=$(sha256sum apk.apk | awk '{print $1}')
+          # Convert raw hex to colon-separated uppercase (21:C7:5D:...)
+          COLON=$(echo "$SHA256" | sed 's/../\U&:/g; s/:$//')
+          echo "sha256_raw=$SHA256" >> "$GITHUB_OUTPUT"
+          echo "sha256_colon=$COLON" >> "$GITHUB_OUTPUT"
+
+      - name: Derive display values
+        id: meta
+        run: |
+          # Version: strip leading v/V, prepend v for display
+          TAG="${{ github.event.release.tag_name }}"
+          NUM="${TAG#v}"
+          NUM="${NUM#V}"
+          VERSION="v${NUM}"
+
+          # File size in MB (rounded to 2dp)
+          BYTES=$(stat -c%s apk.apk)
+          SIZE=$(awk "BEGIN { printf \"%.2f\", $BYTES / 1048576 }")
+
+          # Release date: DD Mon YYYY
+          DATE=$(date -u '+%-d %b %Y')
+
+          # Direct download URL for the APK asset on GitHub Releases
+          DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/${TAG}/${{ steps.apk.outputs.asset_name }}"
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "size=${SIZE} MB" >> "$GITHUB_OUTPUT"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "download_url=$DOWNLOAD_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Patch HTML files
+        env:
+          VERSION:      ${{ steps.meta.outputs.version }}
+          SIZE:         ${{ steps.meta.outputs.size }}
+          DATE:         ${{ steps.meta.outputs.date }}
+          DOWNLOAD_URL: ${{ steps.meta.outputs.download_url }}
+          SHA256_COLON: ${{ steps.hash.outputs.sha256_colon }}
+          SHA256_RAW:   ${{ steps.hash.outputs.sha256_raw }}
+        run: |
+          # Files that carry the signing-key fingerprint in their footer
+          FOOTER_FILES="index.html about.html changelog.html pricing.html privacy.html help/index.html guide/index.html"
+
+          # 1. Update fingerprint site-wide (colon-separated form used everywhere)
+          for f in $FOOTER_FILES; do
+            [ -f "$f" ] || continue
+            sed -i "s|SHA256: [0-9A-Fa-f:]\{95\}|SHA256: ${SHA256_COLON}|g" "$f"
+          done
+
+          # 2. Patch install.html: download link, button text, version, size, date, fingerprint
+          sed -i \
+            -e "s|href=\"https://github\.com/[^\"]*\.apk\"|href=\"${DOWNLOAD_URL}\"|g" \
+            -e "s|Download ClanForge v[^ ]* APK|Download ClanForge ${VERSION} APK|g" \
+            -e "s|<dd>v[0-9][^<]*</dd>|<dd>${VERSION}</dd>|" \
+            -e "s|<dd>~[0-9][^<]* MB</dd>|<dd>~${SIZE}</dd>|" \
+            -e "s|<dd>[0-9][^<]* 20[0-9][0-9]</dd>|<dd>${DATE}</dd>|" \
+            -e "s|SHA256: [0-9A-Fa-f:]\{95\}|SHA256: ${SHA256_COLON}|g" \
+            install.html
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html about.html changelog.html pricing.html privacy.html \
+                  help/index.html guide/index.html install.html
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "Release ${{ github.event.release.tag_name }}: update APK link, hash, version, size, date"
+          git push origin main
